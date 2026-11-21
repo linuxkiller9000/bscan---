@@ -1,0 +1,82 @@
+name: Fetch BScan model assets
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch-model-assets:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Download and verify models
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          mkdir -p models/tessdata_fast models/uvdoc
+
+          curl -fL --retry 3 --retry-all-errors \
+            https://raw.githubusercontent.com/tesseract-ocr/tessdata_fast/main/ara.traineddata \
+            -o models/tessdata_fast/ara.traineddata
+
+          curl -fL --retry 3 --retry-all-errors \
+            https://raw.githubusercontent.com/tesseract-ocr/tessdata_fast/main/eng.traineddata \
+            -o models/tessdata_fast/eng.traineddata
+
+          curl -fL --retry 3 --retry-all-errors \
+            https://huggingface.co/PaddlePaddle/UVDoc_onnx/resolve/main/inference.onnx \
+            -o models/uvdoc/uvdoc.onnx
+
+          cat <<'CHECKSUMS' | sha256sum --check -
+          e3206d3dc87fd50c24a0fb9f01838615911d25168f4e64415244b67d2bb3e729  models/tessdata_fast/ara.traineddata
+          7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2  models/tessdata_fast/eng.traineddata
+          54cab30dc2cf347b4f3d6971c833b1c3d84f5ef17280f1f6d15796bff20e63d6  models/uvdoc/uvdoc.onnx
+          CHECKSUMS
+
+      - name: Include license texts
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fL --retry 3 \
+            https://raw.githubusercontent.com/tesseract-ocr/tessdata_fast/main/LICENSE \
+            -o models/tessdata_fast/LICENSE
+          curl -fL --retry 3 \
+            https://www.apache.org/licenses/LICENSE-2.0.txt \
+            -o models/uvdoc/LICENSE
+
+      - name: Record asset sources
+        shell: bash
+        run: |
+          cat > models/ASSET-SOURCES.md <<'EOF'
+          # BScan model assets
+
+          All model files are downloaded by GitHub Actions and verified
+          with SHA-256 before being committed.
+
+          | File | Source | License | SHA-256 |
+          |---|---|---|---|
+          | tessdata_fast/ara.traineddata | https://github.com/tesseract-ocr/tessdata_fast | Apache-2.0 | e3206d3dc87fd50c24a0fb9f01838615911d25168f4e64415244b67d2bb3e729 |
+          | tessdata_fast/eng.traineddata | https://github.com/tesseract-ocr/tessdata_fast | Apache-2.0 | 7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2 |
+          | uvdoc/uvdoc.onnx | https://huggingface.co/PaddlePaddle/UVDoc_onnx | Apache-2.0 | 54cab30dc2cf347b4f3d6971c833b1c3d84f5ef17280f1f6d15796bff20e63d6 |
+          EOF
+
+      - name: Commit assets to main
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add models/
+          if git diff --cached --quiet; then
+            echo "Assets are already up to date."
+            exit 0
+          fi
+          git commit -m "chore(models): add verified BScan model assets"
+          git push origin HEAD:main
