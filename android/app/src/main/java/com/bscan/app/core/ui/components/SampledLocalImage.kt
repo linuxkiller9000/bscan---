@@ -6,9 +6,6 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.size
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.outlined.BrokenImage
-import androidx.compose.material.icons.outlined.Description
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -24,6 +21,7 @@ import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import com.bscan.app.core.data.storage.SampledBitmapLoader
+import com.bscan.app.core.ui.icons.BscanIcons
 import com.bscan.app.core.ui.theme.BscanThemeTokens
 
 @Composable
@@ -84,7 +82,7 @@ fun SampledLocalImage(
             }
             is ImageLoadState.Empty -> {
                 Icon(
-                    imageVector = Icons.Outlined.Description,
+                    imageVector = BscanIcons.Description,
                     contentDescription = contentDescription,
                     tint = MaterialTheme.colorScheme.onSurfaceVariant,
                     modifier = Modifier.size(22.dp),
@@ -92,7 +90,7 @@ fun SampledLocalImage(
             }
             is ImageLoadState.Failed -> {
                 Icon(
-                    imageVector = Icons.Outlined.BrokenImage,
+                    imageVector = BscanIcons.BrokenImage,
                     contentDescription = contentDescription,
                     tint = MaterialTheme.colorScheme.error,
                     modifier = Modifier.size(22.dp),

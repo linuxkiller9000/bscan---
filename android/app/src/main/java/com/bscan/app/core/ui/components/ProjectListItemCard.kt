@@ -13,9 +13,9 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.outlined.ChevronRight
-import androidx.compose.material.icons.outlined.DeleteOutline
-import androidx.compose.material.icons.outlined.DriveFileRenameOutline
+import androidx.compose.material.icons.automirrored.outlined.KeyboardArrowRight
+import androidx.compose.material.icons.outlined.Delete
+import androidx.compose.material.icons.outlined.Edit
 import androidx.compose.material.icons.outlined.MoreVert
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
@@ -128,7 +128,7 @@ fun ProjectListItemCard(
                                 text = { Text(stringResource(R.string.action_rename_project)) },
                                 leadingIcon = {
                                     Icon(
-                                        imageVector = Icons.Outlined.DriveFileRenameOutline,
+                                        imageVector = Icons.Outlined.Edit,
                                         contentDescription = null,
                                     )
                                 },
@@ -148,7 +148,7 @@ fun ProjectListItemCard(
                                 },
                                 leadingIcon = {
                                     Icon(
-                                        imageVector = Icons.Outlined.DeleteOutline,
+                                        imageVector = Icons.Outlined.Delete,
                                         contentDescription = null,
                                         tint = MaterialTheme.colorScheme.error,
                                     )
@@ -163,7 +163,7 @@ fun ProjectListItemCard(
                 }
             } else {
                 Icon(
-                    imageVector = Icons.Outlined.ChevronRight,
+                    imageVector = Icons.AutoMirrored.Outlined.KeyboardArrowRight,
                     contentDescription = null,
                     tint = extended.textMuted,
                 )

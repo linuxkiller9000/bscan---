@@ -25,9 +25,6 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.outlined.ArrowBack
-import androidx.compose.material.icons.outlined.CameraAlt
-import androidx.compose.material.icons.outlined.PhotoLibrary
-import androidx.compose.material.icons.outlined.VerifiedUser
 import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -57,6 +54,7 @@ import androidx.lifecycle.compose.LifecycleEventEffect
 import com.bscan.app.R
 import com.bscan.app.core.ui.components.BscanCard
 import com.bscan.app.core.ui.components.StatusTag
+import com.bscan.app.core.ui.icons.BscanIcons
 import com.bscan.app.core.ui.theme.BscanThemeTokens
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -145,9 +143,9 @@ fun CameraFoundationScreen(
                     ) {
                         Icon(
                             imageVector = if (hasCameraPermission) {
-                                Icons.Outlined.VerifiedUser
+                                BscanIcons.VerifiedShield
                             } else {
-                                Icons.Outlined.CameraAlt
+                                BscanIcons.Camera
                             },
                             contentDescription = null,
                             tint = if (hasCameraPermission) {
@@ -225,7 +223,7 @@ fun CameraFoundationScreen(
                         modifier = Modifier.fillMaxWidth(),
                     ) {
                         Icon(
-                            imageVector = Icons.Outlined.PhotoLibrary,
+                            imageVector = BscanIcons.PhotoLibrary,
                             contentDescription = null,
                             modifier = Modifier.size(18.dp),
                         )

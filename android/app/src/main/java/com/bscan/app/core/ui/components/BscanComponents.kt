@@ -15,9 +15,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.outlined.DocumentScanner
-import androidx.compose.material.icons.outlined.ErrorOutline
-import androidx.compose.material.icons.outlined.FolderOpen
+import androidx.compose.material.icons.outlined.Warning
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
@@ -36,6 +34,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.bscan.app.R
+import com.bscan.app.core.ui.icons.BscanIcons
 import com.bscan.app.core.ui.theme.BscanThemeTokens
 
 @Composable
@@ -56,7 +55,7 @@ fun BscanWordmark(
             contentAlignment = Alignment.Center,
         ) {
             Icon(
-                imageVector = Icons.Outlined.DocumentScanner,
+                imageVector = BscanIcons.DocumentScanner,
                 contentDescription = null,
                 tint = MaterialTheme.colorScheme.primary,
                 modifier = Modifier.size(20.dp),
@@ -150,7 +149,7 @@ fun BscanEmptyState(
     title: String,
     body: String,
     modifier: Modifier = Modifier,
-    icon: ImageVector = Icons.Outlined.FolderOpen,
+    icon: ImageVector = BscanIcons.Folder,
     action: (@Composable () -> Unit)? = null,
 ) {
     BscanCard(modifier = modifier.fillMaxWidth()) {
@@ -213,7 +212,7 @@ fun BscanErrorBanner(
             verticalAlignment = Alignment.CenterVertically,
         ) {
             Icon(
-                imageVector = Icons.Outlined.ErrorOutline,
+                imageVector = Icons.Outlined.Warning,
                 contentDescription = null,
                 tint = MaterialTheme.colorScheme.error,
                 modifier = Modifier.size(20.dp),

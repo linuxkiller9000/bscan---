@@ -4,7 +4,6 @@ import android.net.Uri
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.outlined.Folder
 import androidx.compose.material.icons.outlined.Home
 import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material3.Icon
@@ -31,6 +30,7 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.bscan.app.AppContainer
 import com.bscan.app.R
+import com.bscan.app.core.ui.icons.BscanIcons
 import com.bscan.app.feature.camera.CameraFoundationScreen
 import com.bscan.app.feature.home.HomeScreen
 import com.bscan.app.feature.home.HomeViewModel
@@ -58,7 +58,7 @@ private enum class TopLevelTab(
     val icon: ImageVector,
 ) {
     HOME(BscanRoutes.HOME, R.string.nav_home, Icons.Outlined.Home),
-    PROJECTS(BscanRoutes.PROJECTS, R.string.nav_projects, Icons.Outlined.Folder),
+    PROJECTS(BscanRoutes.PROJECTS, R.string.nav_projects, BscanIcons.Folder),
     SETTINGS(BscanRoutes.SETTINGS, R.string.nav_settings, Icons.Outlined.Settings),
 }
 

@@ -18,10 +18,6 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.outlined.DocumentScanner
-import androidx.compose.material.icons.outlined.FolderOpen
-import androidx.compose.material.icons.outlined.PhotoLibrary
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -44,6 +40,7 @@ import com.bscan.app.core.ui.components.BscanErrorBanner
 import com.bscan.app.core.ui.components.BscanLoadingRow
 import com.bscan.app.core.ui.components.BscanWordmark
 import com.bscan.app.core.ui.components.ProjectListItemCard
+import com.bscan.app.core.ui.icons.BscanIcons
 import com.bscan.app.core.ui.theme.BscanThemeTokens
 import com.bscan.app.feature.importmedia.rememberGalleryImagePicker
 
@@ -121,7 +118,7 @@ fun HomeScreen(
                             contentAlignment = Alignment.Center,
                         ) {
                             Icon(
-                                imageVector = Icons.Outlined.DocumentScanner,
+                                imageVector = BscanIcons.DocumentScanner,
                                 contentDescription = null,
                                 modifier = Modifier.size(24.dp),
                             )
@@ -164,7 +161,7 @@ fun HomeScreen(
                             contentAlignment = Alignment.Center,
                         ) {
                             Icon(
-                                imageVector = Icons.Outlined.PhotoLibrary,
+                                imageVector = BscanIcons.PhotoLibrary,
                                 contentDescription = null,
                                 tint = MaterialTheme.colorScheme.primary,
                                 modifier = Modifier.size(20.dp),
@@ -215,7 +212,7 @@ fun HomeScreen(
                 BscanEmptyState(
                     title = stringResource(R.string.empty_home_title),
                     body = stringResource(R.string.empty_home_body),
-                    icon = Icons.Outlined.FolderOpen,
+                    icon = BscanIcons.Folder,
                     action = {
                         OutlinedButton(
                             onClick = { if (!uiState.isImporting) launchGalleryPicker() },
@@ -226,7 +223,7 @@ fun HomeScreen(
                             ),
                         ) {
                             Icon(
-                                imageVector = Icons.Outlined.PhotoLibrary,
+                                imageVector = BscanIcons.PhotoLibrary,
                                 contentDescription = null,
                                 modifier = Modifier.size(18.dp),
                             )

@@ -20,15 +20,8 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.outlined.ArrowBack
-import androidx.compose.material.icons.outlined.AddPhotoAlternate
-import androidx.compose.material.icons.outlined.AutoFixHigh
-import androidx.compose.material.icons.outlined.Crop
-import androidx.compose.material.icons.outlined.FileUpload
-import androidx.compose.material.icons.outlined.GridOn
+import androidx.compose.material.icons.outlined.Add
 import androidx.compose.material.icons.outlined.Lock
-import androidx.compose.material.icons.outlined.RotateRight
-import androidx.compose.material.icons.outlined.TextFields
-import androidx.compose.material.icons.outlined.Transform
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -61,6 +54,7 @@ import com.bscan.app.core.ui.components.BscanFormatters
 import com.bscan.app.core.ui.components.BscanLoadingRow
 import com.bscan.app.core.ui.components.SampledLocalImage
 import com.bscan.app.core.ui.components.StatusTag
+import com.bscan.app.core.ui.icons.BscanIcons
 import com.bscan.app.core.ui.theme.BscanThemeTokens
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -126,7 +120,7 @@ fun ImportedPreviewScreen(
                             onClick = { launchAddPagesPicker() },
                         ) {
                             Icon(
-                                imageVector = Icons.Outlined.AddPhotoAlternate,
+                                imageVector = Icons.Outlined.Add,
                                 contentDescription = null,
                                 modifier = Modifier.size(18.dp),
                             )
@@ -319,13 +313,13 @@ fun ImportedPreviewScreen(
                             LazyRow(
                                 horizontalArrangement = Arrangement.spacedBy(8.dp),
                             ) {
-                                item { DisabledToolTile(stringResource(R.string.tool_crop), Icons.Outlined.Crop) }
-                                item { DisabledToolTile(stringResource(R.string.tool_rotate), Icons.Outlined.RotateRight) }
-                                item { DisabledToolTile(stringResource(R.string.tool_perspective), Icons.Outlined.Transform) }
-                                item { DisabledToolTile(stringResource(R.string.tool_dewarp), Icons.Outlined.GridOn) }
-                                item { DisabledToolTile(stringResource(R.string.tool_enhance), Icons.Outlined.AutoFixHigh) }
-                                item { DisabledToolTile(stringResource(R.string.tool_ocr), Icons.Outlined.TextFields) }
-                                item { DisabledToolTile(stringResource(R.string.tool_export), Icons.Outlined.FileUpload) }
+                                item { DisabledToolTile(stringResource(R.string.tool_crop), BscanIcons.Crop) }
+                                item { DisabledToolTile(stringResource(R.string.tool_rotate), BscanIcons.RotateRight) }
+                                item { DisabledToolTile(stringResource(R.string.tool_perspective), BscanIcons.Perspective) }
+                                item { DisabledToolTile(stringResource(R.string.tool_dewarp), BscanIcons.Dewarp) }
+                                item { DisabledToolTile(stringResource(R.string.tool_enhance), BscanIcons.Enhance) }
+                                item { DisabledToolTile(stringResource(R.string.tool_ocr), BscanIcons.TextOcr) }
+                                item { DisabledToolTile(stringResource(R.string.tool_export), BscanIcons.Export) }
                             }
                         }
                     }

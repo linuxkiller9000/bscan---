@@ -15,8 +15,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.outlined.AddPhotoAlternate
-import androidx.compose.material.icons.outlined.FolderOpen
+import androidx.compose.material.icons.outlined.Add
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -43,6 +42,7 @@ import com.bscan.app.core.ui.components.BscanEmptyState
 import com.bscan.app.core.ui.components.BscanErrorBanner
 import com.bscan.app.core.ui.components.BscanLoadingRow
 import com.bscan.app.core.ui.components.ProjectListItemCard
+import com.bscan.app.core.ui.icons.BscanIcons
 import com.bscan.app.core.ui.theme.BscanThemeTokens
 import com.bscan.app.feature.importmedia.rememberGalleryImagePicker
 
@@ -99,7 +99,7 @@ fun ProjectsScreen(
                     ),
                 ) {
                     Icon(
-                        imageVector = Icons.Outlined.AddPhotoAlternate,
+                        imageVector = Icons.Outlined.Add,
                         contentDescription = null,
                         modifier = Modifier.size(18.dp),
                     )
@@ -129,7 +129,7 @@ fun ProjectsScreen(
                 BscanEmptyState(
                     title = stringResource(R.string.projects_empty_title),
                     body = stringResource(R.string.projects_empty_body),
-                    icon = Icons.Outlined.FolderOpen,
+                    icon = BscanIcons.Folder,
                     action = {
                         Button(
                             onClick = { if (!uiState.isImporting) launchGalleryPicker() },

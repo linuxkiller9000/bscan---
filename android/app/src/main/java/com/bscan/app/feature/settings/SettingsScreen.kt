@@ -16,11 +16,6 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.CheckCircle
-import androidx.compose.material.icons.outlined.CleaningServices
-import androidx.compose.material.icons.outlined.Memory
-import androidx.compose.material.icons.outlined.Shield
-import androidx.compose.material.icons.outlined.Storage
-import androidx.compose.material.icons.outlined.Translate
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -45,6 +40,7 @@ import com.bscan.app.core.model.PreviewResolutionCap
 import com.bscan.app.core.ui.components.BscanCard
 import com.bscan.app.core.ui.components.BscanFormatters
 import com.bscan.app.core.ui.components.StatusTag
+import com.bscan.app.core.ui.icons.BscanIcons
 import com.bscan.app.core.ui.theme.BscanThemeTokens
 
 @Composable
@@ -109,7 +105,7 @@ fun SettingsScreen(
             Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
                 SectionHeader(
                     title = stringResource(R.string.settings_section_ocr),
-                    icon = Icons.Outlined.Translate,
+                    icon = BscanIcons.Translate,
                 )
                 BscanCard(modifier = Modifier.fillMaxWidth()) {
                     Column(modifier = Modifier.padding(14.dp)) {
@@ -160,7 +156,7 @@ fun SettingsScreen(
             Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
                 SectionHeader(
                     title = stringResource(R.string.settings_section_processing),
-                    icon = Icons.Outlined.Memory,
+                    icon = BscanIcons.Memory,
                 )
                 BscanCard(modifier = Modifier.fillMaxWidth()) {
                     Column(
@@ -232,7 +228,7 @@ fun SettingsScreen(
             Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
                 SectionHeader(
                     title = stringResource(R.string.settings_section_storage),
-                    icon = Icons.Outlined.Storage,
+                    icon = BscanIcons.Storage,
                 )
                 BscanCard(modifier = Modifier.fillMaxWidth()) {
                     Column(
@@ -268,7 +264,7 @@ fun SettingsScreen(
                             modifier = Modifier.fillMaxWidth(),
                         ) {
                             Icon(
-                                imageVector = Icons.Outlined.CleaningServices,
+                                imageVector = BscanIcons.CleanCache,
                                 contentDescription = null,
                                 modifier = Modifier.size(18.dp),
                             )
@@ -284,7 +280,7 @@ fun SettingsScreen(
             Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
                 SectionHeader(
                     title = stringResource(R.string.settings_section_about),
-                    icon = Icons.Outlined.Shield,
+                    icon = BscanIcons.Shield,
                 )
                 BscanCard(modifier = Modifier.fillMaxWidth()) {
                     Column(
