@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">bscan</string>
+    <string name="app_arabic_name">بسكان</string>
+    <string name="app_tagline">Offline document scanning</string>
+
+    <string name="nav_home">Home</string>
+    <string name="nav_projects">Projects</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_back">Navigate back</string>
+
+    <string name="action_scan_document">Scan document</string>
+    <string name="action_scan_document_subtitle">Camera capture and edge guidance</string>
+    <string name="action_import_photos">Import photos</string>
+    <string name="action_import_photos_subtitle">Select one or more pages from gallery</string>
+    <string name="section_recent_projects">Recent projects</string>
+    <string name="action_view_all">View all</string>
+    <string name="empty_home_title">No documents yet</string>
+    <string name="empty_home_body">Import a photo from your gallery to start a project. Originals stay untouched inside private offline storage.</string>
+
+    <string name="projects_title">Projects</string>
+    <string name="projects_empty_title">Your library is empty</string>
+    <string name="projects_empty_body">Imported documents will appear here with thumbnails, page counts, and dates.</string>
+    <string name="project_page_count_one">%1$d page</string>
+    <string name="project_page_count_other">%1$d pages</string>
+    <string name="action_delete_project">Delete project</string>
+    <string name="action_rename_project">Rename project</string>
+    <string name="dialog_delete_title">Delete project?</string>
+    <string name="dialog_delete_body">This removes the project and its app-managed copies. Original photos in your device gallery are never deleted.</string>
+    <string name="dialog_rename_title">Rename project</string>
+    <string name="dialog_rename_label">Project name</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_save">Save</string>
+    <string name="action_retry">Retry</string>
+    <string name="action_dismiss">Dismiss</string>
+
+    <string name="preview_title">Document preview</string>
+    <string name="preview_add_pages">Add pages</string>
+    <string name="preview_original_preserved">Original file preserved (read-only)</string>
+    <string name="preview_dimensions_label">Original resolution</string>
+    <string name="preview_size_label">File size</string>
+    <string name="preview_page_indicator">Page %1$d of %2$d</string>
+    <string name="preview_importing">Importing selected image(s)…</string>
+    <string name="preview_import_error">Could not import the selected image. Check that the file is a readable image and enough storage is available.</string>
+    <string name="preview_load_error">Unable to render preview for this page.</string>
+    <string name="preview_tools_section">Editing &amp; OCR tools</string>
+    <string name="preview_tools_milestone_note">Non-destructive editing, OpenCV processing, Tesseract OCR, and export are scheduled for upcoming milestones.</string>
+    <string name="tool_crop">Crop</string>
+    <string name="tool_rotate">Rotate</string>
+    <string name="tool_perspective">Perspective</string>
+    <string name="tool_dewarp">Dewarp</string>
+    <string name="tool_enhance">Enhance</string>
+    <string name="tool_ocr">OCR</string>
+    <string name="tool_export">Export</string>
+    <string name="badge_not_implemented">Not yet implemented</string>
+
+    <string name="camera_title">Document scanner</string>
+    <string name="camera_permission_title">Camera permission required</string>
+    <string name="camera_permission_rationale">bscan uses your camera strictly on-device to photograph documents. No photos leave your phone.</string>
+    <string name="camera_permission_grant">Grant camera access</string>
+    <string name="camera_permission_settings">Open app settings</string>
+    <string name="camera_permission_denied_permanently">Camera access was permanently denied. Enable it in Android Settings when ready to use live scanning.</string>
+    <string name="camera_milestone_title">CameraX scanner scheduled next</string>
+    <string name="camera_milestone_body">Camera permission is ready. Live CameraX preview, flash control, and automatic page-edge detection are scheduled for Milestone 2 and are not yet active in this foundation build.</string>
+    <string name="camera_use_import_instead">Import from gallery instead</string>
+
+    <string name="settings_title">Settings</string>
+    <string name="settings_section_ocr">OCR languages (Tesseract 5)</string>
+    <string name="settings_ocr_summary">Offline language packs will be managed locally without mandatory downloads. None are bundled yet.</string>
+    <string name="settings_ocr_not_installed">Not installed</string>
+    <string name="settings_section_processing">Processing &amp; memory</string>
+    <string name="settings_processing_sequential">Sequential single-page processing</string>
+    <string name="settings_processing_sequential_desc">Processes one page at a time to prevent memory spikes and thermal throttling on mid-range hardware.</string>
+    <string name="settings_preview_quality">Preview resolution cap</string>
+    <string name="settings_preview_quality_desc">Originals always stay full resolution on disk; previews are downscaled for smooth display.</string>
+    <string name="settings_section_storage">Storage management</string>
+    <string name="settings_storage_originals">Managed originals</string>
+    <string name="settings_storage_thumbnails">Preview thumbnails</string>
+    <string name="settings_storage_cache">Temporary cache</string>
+    <string name="settings_clear_cache">Clear preview cache</string>
+    <string name="settings_cache_cleared">Preview cache cleared. Originals untouched.</string>
+    <string name="settings_section_about">About &amp; privacy</string>
+    <string name="settings_privacy_title">100% offline by design</string>
+    <string name="settings_privacy_body">bscan does not request internet permission. All scanned pages, project metadata, and future OCR processing remain strictly on this device.</string>
+    <string name="settings_version_label">Version</string>
+    <string name="settings_app_id_label">Application ID</string>
+</resources>

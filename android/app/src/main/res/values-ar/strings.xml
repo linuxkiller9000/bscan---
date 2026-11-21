@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">بسكان</string>
+    <string name="app_arabic_name">bscan</string>
+    <string name="app_tagline">مسح ضوئي للمستندات بدون إنترنت</string>
+
+    <string name="nav_home">الرئيسية</string>
+    <string name="nav_projects">المشاريع</string>
+    <string name="nav_settings">الإعدادات</string>
+    <string name="nav_back">رجوع</string>
+
+    <string name="action_scan_document">مسح مستند</string>
+    <string name="action_scan_document_subtitle">التقاط بالكاميرا وتحديد الحواف</string>
+    <string name="action_import_photos">استيراد صور</string>
+    <string name="action_import_photos_subtitle">اختر صورة أو أكثر من المعرض</string>
+    <string name="section_recent_projects">المشاريع الأخيرة</string>
+    <string name="action_view_all">عرض الكل</string>
+    <string name="empty_home_title">لا توجد مستندات بعد</string>
+    <string name="empty_home_body">استورد صورة من المعرض لبدء مشروع جديد. تبقى الصور الأصلية محفوظة دون تعديل داخل التطبيق.</string>
+
+    <string name="projects_title">المشاريع</string>
+    <string name="projects_empty_title">مكتبتك فارغة</string>
+    <string name="projects_empty_body">ستظهر المستندات المستوردة هنا مع الصور المصغرة وعدد الصفحات والتواريخ.</string>
+    <string name="project_page_count_one">صفحة واحدة (%1$d)</string>
+    <string name="project_page_count_other">%1$d صفحات</string>
+    <string name="action_delete_project">حذف المشروع</string>
+    <string name="action_rename_project">إعادة تسمية المشروع</string>
+    <string name="dialog_delete_title">حذف المشروع؟</string>
+    <string name="dialog_delete_body">سيتم حذف المشروع ونسخه المحفوظة داخل التطبيق فقط. لن يتم حذف صورك الأصلية من معرض الجهاز.</string>
+    <string name="dialog_rename_title">إعادة تسمية المشروع</string>
+    <string name="dialog_rename_label">اسم المشروع</string>
+    <string name="action_cancel">إلغاء</string>
+    <string name="action_delete">حذف</string>
+    <string name="action_save">حفظ</string>
+    <string name="action_retry">إعادة المحاولة</string>
+    <string name="action_dismiss">إغلاق</string>
+
+    <string name="preview_title">معاينة المستند</string>
+    <string name="preview_add_pages">إضافة صفحات</string>
+    <string name="preview_original_preserved">الملف الأصلي محفوظ للقراءة فقط</string>
+    <string name="preview_dimensions_label">الدقة الأصلية</string>
+    <string name="preview_size_label">حجم الملف</string>
+    <string name="preview_page_indicator">صفحة %1$d من %2$d</string>
+    <string name="preview_importing">جاري استيراد الصور…</string>
+    <string name="preview_import_error">تعذر استيراد الصورة المحددة. تأكد من صلاحية الملف وتوفر مساحة تخزين.</string>
+    <string name="preview_load_error">تعذر عرض المعاينة لهذه الصفحة.</string>
+    <string name="preview_tools_section">أدوات التعديل والتعرف على النص</string>
+    <string name="preview_tools_milestone_note">التعديل غير الإتلافي ومعالجة OpenCV والتعرف الضوئي Tesseract والتصدير مجدولة للمراحل القادمة.</string>
+    <string name="tool_crop">قص</string>
+    <string name="tool_rotate">تدوير</string>
+    <string name="tool_perspective">منظور</string>
+    <string name="tool_dewarp">تسطيح</string>
+    <string name="tool_enhance">تحسين</string>
+    <string name="tool_ocr">OCR</string>
+    <string name="tool_export">تصدير</string>
+    <string name="badge_not_implemented">غير مفعل بعد</string>
+
+    <string name="camera_title">ماسح المستندات</string>
+    <string name="camera_permission_title">إذن الكاميرا مطلوب</string>
+    <string name="camera_permission_rationale">يستخدم بسكان الكاميرا محلياً فقط لتصوير المستندات. لا تغادر أي صورة جهازك.</string>
+    <string name="camera_permission_grant">منح إذن الكاميرا</string>
+    <string name="camera_permission_settings">فتح إعدادات التطبيق</string>
+    <string name="camera_permission_denied_permanently">تم رفض إذن الكاميرا بشكل دائم. يمكنك تفعيله من إعدادات النظام.</string>
+    <string name="camera_milestone_title">ماسح CameraX في المرحلة القادمة</string>
+    <string name="camera_milestone_body">إذن الكاميرا جاهز. المعاينة المباشرة وتحديد الحواف والتحكم بالفلاش مجدولة للمرحلة الثانية.</string>
+    <string name="camera_use_import_instead">استيراد من المعرض بدلاً من ذلك</string>
+
+    <string name="settings_title">الإعدادات</string>
+    <string name="settings_section_ocr">لغات التعرف على النص (Tesseract 5)</string>
+    <string name="settings_ocr_summary">ستتم إدارة حزم اللغات محلياً دون تحميلات إجبارية. لا توجد حزم مثبتة حالياً.</string>
+    <string name="settings_ocr_not_installed">غير مثبتة</string>
+    <string name="settings_section_processing">المعالجة والذاكرة</string>
+    <string name="settings_processing_sequential">معالجة متسلسلة لصفحة واحدة</string>
+    <string name="settings_processing_sequential_desc">يعالج صفحة واحدة في كل مرة لتجنب استهلاك الذاكرة وارتفاع الحرارة.</string>
+    <string name="settings_preview_quality">حد دقة المعاينة</string>
+    <string name="settings_preview_quality_desc">تبقى الصور الأصلية بالدقة الكاملة، بينما تُصغر المعاينة لأداء سلس.</string>
+    <string name="settings_section_storage">إدارة التخزين</string>
+    <string name="settings_storage_originals">الصور الأصلية المحفوظة</string>
+    <string name="settings_storage_thumbnails">الصور المصغرة</string>
+    <string name="settings_storage_cache">الذاكرة المؤقتة</string>
+    <string name="settings_clear_cache">مسح ذاكرة المعاينة المؤقتة</string>
+    <string name="settings_cache_cleared">تم مسح الذاكرة المؤقتة دون المساس بالصور الأصلية.</string>
+    <string name="settings_section_about">حول التطبيق والخصوصية</string>
+    <string name="settings_privacy_title">يعمل بالكامل دون إنترنت</string>
+    <string name="settings_privacy_body">لا يطلب بسكان إذن الاتصال بالإنترنت. جميع المستندات والبيانات تبقى على جهازك فقط.</string>
+    <string name="settings_version_label">الإصدار</string>
+    <string name="settings_app_id_label">معرف التطبيق</string>
+</resources>

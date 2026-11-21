@@ -1,0 +1,8 @@
+{
+  "name": "bscan",
+  "description": "Offline-first Android document scanning application (Kotlin, Jetpack Compose, Material 3, Room) — Milestone 1 Foundation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

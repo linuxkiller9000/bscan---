@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bscan_bg_dark">#0B1220</color>
+    <color name="bscan_surface_dark">#121D2D</color>
+    <color name="bscan_accent">#38BDF8</color>
+</resources>
